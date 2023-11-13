@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - composer install
+      - php artisan make:frontend
+      - zip -r laravel-app.zip .
+
+artifacts:
+  - laravel-app.zip
